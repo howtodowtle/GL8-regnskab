@@ -9,6 +9,8 @@ import gorgireader
 import gorgimessages
 import opslaget
 
+# set values:
+
 # only define path when different than 
 # D:/Dropbox/Egmont/Regnskab/Aktuelt Regnskab/gangregnskab_egmontgl8.xlsx
 df = gorgireader.getWorkbook()

@@ -4,7 +4,7 @@ Created on Wed Aug  2 19:37:35 2017
 
 @author: howtodowtle
 """
-#row_in_array, index, dates,
+
 def createOpslagetEN(monthEN, year, dates):
     # creates a facebook post
     # in ENglish
@@ -28,8 +28,8 @@ def createOpslagetEN(monthEN, year, dates):
     "Our kitchen account: Reg. 2104 Kto. 4391 845 196 (can also be found "
     "in the facebook group info)." 
     % (monthEN, year, dates))
-
-    return(print(posting))
+    print(posting)
+    return(posting)
 
 def createOpslagetDK(monthDK, year, dates):
     # creates a facebook post
@@ -46,6 +46,6 @@ def createOpslagetDK(monthDK, year, dates):
     "Vores gangkonto: Reg. 2104 Kto. 4391 845 196 (kan også findes i "
     "informationen af facebook gruppen)."
     % (monthDK, year, dates))
-
-    return(print(opslag))    
+    print(opslag)
+    return(opslag)
     

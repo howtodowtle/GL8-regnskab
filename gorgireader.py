@@ -4,9 +4,7 @@ Created on Wed Aug  2 20:25:18 2017
 
 @author: howtodowtle
 """
-# import xlrd
 import pandas as pd
-import numpy as np
 
 def getWorkbook(path = "D:/Dropbox/Egmont/Regnskab/Aktuelt Regnskab/", 
                     filename = "gangregnskab_egmontgl8.xlsx"):

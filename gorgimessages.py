@@ -41,7 +41,8 @@ def createMessage(name, month, year, dates, saldo,
                    "gangkontoen inden d. %s.\n\nSkriv til mig hvis jeg har "
                    "glemt et eller andet, og hvis du har spørgsmål!\n\nKh "
                    "/801 Alex\n\nGangkonto: Reg. 2104 Kto. 4391 845 196"
-                   % (name, month, year, dates, saldo, transfer, deadline))
+                   % (name, month, year, dates, round(saldo), 
+                      round(transfer), deadline))
     elif round(saldo) < 300:
         message = ("Hej %s,\n\nregnskabet for %s %s "
                    "(%s) er oppe i facebook gruppen.\n\nDin "
@@ -50,7 +51,8 @@ def createMessage(name, month, year, dates, saldo,
                    "%s.\n\nSkriv til mig hvis jeg har glemt et eller andet, "
                    "eller hvis du har spørgsmål!\n\nKh /801 Alex\n\n"
                    "Gangkonto: Reg. 2104 Kto. 4391 845 196"
-                   % (name, month, year, dates, saldo, transfer, deadline))
+                   % (name, month, year, dates, round(saldo), 
+                      round(transfer), deadline))
     else:
         message = ("Hej %s,\n\nregnskabet for %s %s "
                    "(%s) er oppe i facebook gruppen.\n\nDin "
@@ -59,7 +61,7 @@ def createMessage(name, month, year, dates, saldo,
                    "hvis jeg har glemt et eller andet, og hvis du har "
                    "spørgsmål!\n\n/801 Alex\n\nGangkonto: Reg. 2104 Kto. "
                    "4391 845 196"
-                   % (name, month, year, dates, saldo))
+                   % (name, month, year, dates, round(saldo)))
         
     return(message)
 
@@ -77,4 +79,4 @@ def createAllMessages(df, month, year, dates, deadline, who = range(1, 24)):
         messages.append(msg)
         print(msg)
         print("\n****\n")
-        return(messages)
+    return(messages)
