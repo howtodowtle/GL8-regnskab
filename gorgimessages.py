@@ -4,32 +4,32 @@ Created on Wed Aug  2 20:25:18 2017
 
 @author: howtodowtle
 """
-#def whichMessage(df):
-#    # reads saldo
-#    # decides, which message to choose
-#    # returns an index
-#    
-#    # initiate a list of messages:
-#    # -1: negative (under 0 kr.)
-#    # 0: neutral (0-300 kr.)
-#    # 1: positive (over 300 kr.)
-#    choice = []
-#    # NB: with .ix accessing the index of the panda df, 
-#    # so not neccessarily starting at 0
-#    for i in range(1, 24):
-#        beboer = df.ix[i]
-#        if round(beboer["ny_saldo"]) < 0:
-#            choice.append(-1)
-#        elif round(beboer["ny_saldo"]) < 300:
-#            choice.append(0)
-#        else:
-#            choice.append(1)
-#    
-#    # add the decision as an 8th col [index 7] to the dataframe
-#    df["msg_type"] = choice        
-#    return(df)
-#
-#df = whichMessage(df)
+def whichMessage(df):
+   # reads saldo
+   # decides, which message to choose
+   # returns an index
+   
+   # initiate a list of messages:
+   # -1: negative (under 0 kr.)
+   # 0: neutral (0-300 kr.)
+   # 1: positive (over 300 kr.)
+   choice = []
+   # NB: with .ix accessing the index of the panda df, 
+   # so not neccessarily starting at 0
+   for i in range(1, 24):
+       beboer = df.ix[i]
+       if round(beboer["ny_saldo"]) < 0:
+           choice.append(-1)
+       elif round(beboer["ny_saldo"]) < 300:
+           choice.append(0)
+       else:
+           choice.append(1)
+   
+   # add the decision as an 8th col [index 7] to the dataframe
+   df["msg_type"] = choice        
+   return(df)
+
+# df = whichMessage(df)
 
 def createMessage(name, month, year, dates, saldo, 
                   transfer, deadline, decision = 1):
