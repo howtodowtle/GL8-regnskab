@@ -36,7 +36,7 @@ def createMessage(name, month, year, dates, saldo,
     # creates a single message
     if round(saldo) < 0:
         message = ("Hej %s,\n\nregnskabet for %s %s (%s) er oppe i facebook "
-                   "gruppen.\n\nDin ny saldo er %d kr.\n\nDa alle skal være "
+                   "gruppen.\n\nDin nye saldo er %d kr.\n\nDa alle skal være "
                    "mindst 300 kr. i plus bedes du overføre %d kr. til "
                    "gangkontoen inden d. %s.\n\nSkriv til mig hvis jeg har "
                    "glemt et eller andet, og hvis du har spørgsmål!\n\nKh "
@@ -46,7 +46,7 @@ def createMessage(name, month, year, dates, saldo,
     elif round(saldo) < 300:
         message = ("Hej %s,\n\nregnskabet for %s %s "
                    "(%s) er oppe i facebook gruppen.\n\nDin "
-                   "ny saldo er +%d kr.\n\nDa alle skal være mindst 300 kr. "
+                   "nye saldo er +%d kr.\n\nDa alle skal være mindst 300 kr. "
                    "i plus bedes du overføre %d kr. til gangkontoen inden d. "
                    "%s.\n\nSkriv til mig hvis jeg har glemt et eller andet, "
                    "eller hvis du har spørgsmål!\n\nKh /801 Alex\n\n"
@@ -56,7 +56,7 @@ def createMessage(name, month, year, dates, saldo,
     else:
         message = ("Hej %s,\n\nregnskabet for %s %s "
                    "(%s) er oppe i facebook gruppen.\n\nDin "
-                   "ny saldo er +%d kr.\n\nDu kan se detaljerne på de "
+                   "nye saldo er +%d kr.\n\nDu kan se detaljerne på de "
                    "forskellige screenshots i gruppen.\n\nSkriv til mig "
                    "hvis jeg har glemt et eller andet, og hvis du har "
                    "spørgsmål!\n\n/801 Alex\n\nGangkonto: Reg. 2104 Kto. "
