@@ -16,7 +16,7 @@ def whichMessage(df):
    choice = []
    # NB: with .ix accessing the index of the panda df, 
    # so not neccessarily starting at 0
-   for i in range(1, 24):
+   for i in range(1, 23):
        beboer = df.ix[i]
        if round(beboer["ny_saldo"]) < 0:
            choice.append(-1)
@@ -67,7 +67,7 @@ def createMessage(name, month, year, dates, saldo,
 
 #m1 = createMessage("alex", "juni", "2017", "somedates", 12, 288, "deeead", 1)    
     
-def createAllMessages(df, month, year, dates, deadline, who = range(1, 24)):
+def createAllMessages(df, month, year, dates, deadline, who = range(1, 23)):
     # goes through the dataframe and creates 23 messages
     # unless specified which exactly
     messages = []

@@ -13,14 +13,14 @@ def getWorkbook(path = "D:/Dropbox/Egmont/Regnskab/Aktuelt Regnskab/",
     regnskab = pd.read_excel(path + filename, sheet_name = "Regnskab")
     
     # extract the relevant part (current inhabitants and overview data)
-    regnskab = regnskab.ix[2:24, :7]
+    regnskab = regnskab.ix[2:23, :7]
     
     # rename columns
     regnskab.columns = ["nummer", "name", "gammel_saldo", "ind", "forbrug",
                         "ny_saldo", "transfer"]
     
-    # reset the indices (rownames): 1 to 23
-    regnskab.index = range(1, 24)
+    # reset the indices (rownames): 1 to 22
+    regnskab.index = range(1, 23)
     
     # return the dataframe
     return(regnskab)
